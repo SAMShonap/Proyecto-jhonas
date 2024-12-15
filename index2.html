@@ -9,7 +9,7 @@
 <body>
   <div class="login-container">
     <h2>Iniciar sesión</h2>
-    <form action="/login" method="POST">
+    <form id="loginForm">
       <label for="username">Usuario:</label>
       <input type="text" id="username" name="username" required>
 
@@ -18,7 +18,31 @@
 
       <button type="submit">Iniciar sesión</button>
     </form>
+
+    <button id="viewProducts" class="secondary-button">Ver productos sin iniciar sesión</button>
   </div>
+
+  <script>
+
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (username === "admin" && password === "1234") {
+
+        window.location.href = "index.html";
+      } else {
+        alert("Usuario o contraseña incorrectos.");
+      }
+    });
+
+
+    document.getElementById('viewProducts').addEventListener('click', function() {
+      window.location.href = "index.html"; 
+    });
+  </script>
 
 <style>
 
@@ -38,6 +62,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
+  text-align: center;
 }
 
 h2 {
@@ -61,6 +86,7 @@ input {
 button {
   width: 100%;
   padding: 10px;
+  margin-top: 8px;
   background-color: #4CAF50;
   color: white;
   border: none;
@@ -72,16 +98,17 @@ button:hover {
   background-color: #45a049;
 }
 
+.secondary-button {
+  background-color: #2196F3;
+}
+
+.secondary-button:hover {
+  background-color: #1E88E5;
+}
+
 /* manu y diego son lo mejor */
 /* manu y diego hicieron este trabajo */
-
 </style>
-
-
-
-</body>
-</html>
-
 
 </body>
 </html>
