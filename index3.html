@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de pago</title>
+</head>
+<body>
+    <main class="wrapper">
+        <div class="card-front">
+            <img src="img/Tarjeta-BBVA-Visa-Platinum-3.png" alt="Frente de la tarjeta">
+            <div class="card-front__data">
+                <img src="img/bcp-logo.jpg" alt="Logo BCP">
+                <p class="card-number">0000 0000 0000 0000</p>
+                <div class="card-name-date">
+                    <p class="card-name">Diego Aguilar De la Cruz</p>
+                    <p class="card-date">00/00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-back">
+            <img src="img/PARTE TRASERA BCP.jpg" alt="Dorso de la tarjeta">
+            <div class="card-back__data">
+                <p class="card-cvc">000</p>
+            </div>
+        </div>
+    
+        <form class="form">
+            <div class="form-group">
+                <label for="input-name" class="label">Cardholder Name</label>
+                <input type="text" class="input" id="input-name" placeholder="e.g. Jane Applessed">
+            </div>
+    
+            <div class="form-group">
+                <label for="input-number" class="label">Card number</label>
+                <input type="text" class="input" id="input-number">
+            </div>
+    
+            <div class="form-group">
+                <div>
+                    <label for="input-month" class="label">Exp. Date (MM/YY)</label>
+                </div>
+                <input type="text" class="input" id="input-month">
+                <input type="text" class="input" id="input-year">
+            </div>
+    
+            <div class="form-group">
+                <label for="input-cvc" class="label">CVC</label>
+                <input type="text" class="input" id="input-cvc" placeholder="e.g. 123">
+            </div>
+    
+            <div class="form-group">
+                <button class="button" type="submit">Confirm</button>
+            </div>
+        </form>
+    
+        <div class="thank-you">
+            <img src="img/bcp-dark-grey.svg" alt="Icono de completado">
+            <p class="thank-you-para-title">Thank you!</p>
+            <p class="thank-you-text">We've added your card details</p>
+            <button class="button">Continue</button>
+        </div>
+    </main>
+</body>
+</html>
