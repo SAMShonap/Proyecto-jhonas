@@ -7,6 +7,16 @@ html {
 }
 
 
+    .footer-text {
+        text-align: center;
+    }
+
+    #lista-cursos .container {
+      max-width: 1200px; 
+      margin: 0 auto; 
+  }
+
+
 body {
   margin: 0;
 }
@@ -155,9 +165,9 @@ input,
 optgroup,
 select,
 textarea {
-  color: inherit; /* 1 */
-  font: inherit; /* 2 */
-  margin: 0; /* 3 */
+  color: inherit; 
+  font: inherit; 
+  margin: 0; 
 }
 
 
@@ -228,6 +238,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 
+
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -260,4 +271,20 @@ table {
 td,
 th {
   padding: 0;
+}
+
+.card-img-top {
+  animation: moverImagen 10s linear infinite;
+}
+
+@keyframes moverImagen {
+  0% {
+      transform: translateX(0); 
+  }
+  50% {
+      transform: translateX(20px); 
+  }
+  100% {
+      transform: translateX(0); 
+  }
 }
