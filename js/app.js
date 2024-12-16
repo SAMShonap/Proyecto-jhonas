@@ -1,9 +1,10 @@
 const carrito = document.querySelector('#carrito');
 const listaCursos = document.querySelector('#lista-cursos');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
-const vaciarCarritoBtn = document.querySelector('#vaciar-carrito'); 
+const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
+const irAPagarBtn = document.querySelector('#ir-a-pagar'); // Nuevo selector para el botón "Ir a pagar :)"
 
-let articulosCarrito = []; // Inicialización de la variable
+let articulosCarrito = [];
 
 cargarEventListeners();
 
@@ -11,6 +12,7 @@ function cargarEventListeners() {
     listaCursos.addEventListener('click', agregarCurso);
     carrito.addEventListener('click', eliminarCurso);
     vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
+    irAPagarBtn.addEventListener('click', irAPagar); // Evento de redirección
 }
 
 function agregarCurso(e) {
@@ -80,4 +82,11 @@ function vaciarCarrito() {
     while (contenedorCarrito.firstChild) {
         contenedorCarrito.removeChild(contenedorCarrito.firstChild);
     }
+}
+
+
+function irAPagar(e) {
+    e.preventDefault(); 
+    window.location.href = "index3.html"; 
+
 }
